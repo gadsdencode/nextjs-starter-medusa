@@ -5,8 +5,16 @@ const store = require("./store.config.json")
  * @type {import('next').NextConfig}
  */
 const nextConfig = withStoreConfig({
+  experimental: {
+    serverActions: true,
+    serverComponentsExternalPackages: [
+      "@medusajs/product",
+      "@medusajs/modules-sdk",
+    ],
+  },
   features: store.features,
   reactStrictMode: true,
+  "search": true,
   images: {
     remotePatterns: [
       {
@@ -25,10 +33,12 @@ const nextConfig = withStoreConfig({
         protocol: "https",
         hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "hccecom.nyc3.digitaloceanspaces.com",
+      },
     ],
   },
 })
 
-console.log("next.config.js", JSON.stringify(module.exports, null, 2))
-
-module.exports = nextConfig
+module.exports = nextConfig;
