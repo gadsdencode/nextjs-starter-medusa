@@ -11,7 +11,11 @@ import * as SelectPrimitive from "@radix-ui/react-select"
 
 import { cn } from "./utils"
 
-const Select = SelectPrimitive.Root as React.FC<React.ComponentProps<typeof SelectPrimitive.Root>>;
+interface SelectProps extends React.ComponentProps<typeof SelectPrimitive.Root> {}
+
+const Select: React.FC<SelectProps> = ({ children, ...props }) => (
+  <SelectPrimitive.Root {...props}>{children}</SelectPrimitive.Root>
+);
 
 const SelectGroup = SelectPrimitive.Group
 
