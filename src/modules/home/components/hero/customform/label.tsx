@@ -16,18 +16,18 @@ type LabelProps = React.ComponentProps<typeof LabelPrimitive.Root> & {
     htmlFor?: string;
 };
 
-const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
-    ({ children, className, htmlFor, ...props }, ref) => (
-    <LabelPrimitive.Root 
-        ref={ref}
-        className={`${labelVariants} ${className || ''}`} // Correctly applying class names
-        htmlFor={htmlFor} 
-        {...props}
-    >
-        {children}
-    </LabelPrimitive.Root>
-    )
-);
+const Label = React.forwardRef<
+React.ElementRef<typeof LabelPrimitive.Root>,
+React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
+    VariantProps<typeof labelVariants>
+>(({ className, ...props }, ref) => (
+<LabelPrimitive.Root
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+/>
+))
+Label.displayName = LabelPrimitive.Root.displayName
 
 Label.displayName = 'Label';
 
