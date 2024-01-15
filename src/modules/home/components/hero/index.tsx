@@ -28,7 +28,7 @@ const Hero = () => {
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle text-slate-400 font-normal"
           >
-            Family Owned Since 1984
+            Family Owned & Operated Since 1984
           </Heading>
           <div className="flex flex-col justify-center items-center p-5">
         <div

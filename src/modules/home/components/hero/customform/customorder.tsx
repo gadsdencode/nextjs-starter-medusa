@@ -68,7 +68,7 @@ export default function CustomOrderForm() {
           </form>
         </CardContent>
         <CardFooter>
-          <button className="ml-auto text-slate-100 hover:text-slate-500 border rounded-lg">Submit Order</button>
+          <button className="ml-auto text-slate-100 hover:text-slate-500 border rounded-lg p-2">Submit Order</button>
         </CardFooter>
       </Card>
     </div>
