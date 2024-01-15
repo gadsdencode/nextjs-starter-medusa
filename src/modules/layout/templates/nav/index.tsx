@@ -13,7 +13,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
+      <header className="relative h-16 mx-auto border-b duration-200 header-bg border-ui-border-base">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
@@ -24,9 +24,9 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <Link
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="txt-compact-xlarge-plus text-slate-100 hover:text-slate-500 uppercase"
             >
-              Medusa Store
+              Heaters & Controls Hydraulics
             </Link>
           </div>
 
@@ -41,13 +41,13 @@ export default async function Nav() {
                   Search
                 </Link>
               )}
-              <Link className="hover:text-ui-fg-base" href="/account">
+              <Link className="text-slate-100 hover:text-slate-500" href="/account">
                 Account
               </Link>
             </div>
             <Suspense
               fallback={
-                <Link className="hover:text-ui-fg-base flex gap-2" href="/cart">
+                <Link className="text-slate-100 hover:text-slate-500 flex gap-2" href="/cart">
                   Cart (0)
                 </Link>
               }

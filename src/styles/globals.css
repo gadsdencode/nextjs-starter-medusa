@@ -110,3 +110,29 @@
     @apply text-[32px] leading-[44px] font-semibold;
   }
 }
+.front-page-bg {
+  background-image: url("/images/hcc-bg-amazon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.side-menu-bg {
+  background-image: url("/images/hcc-bg-amazon-boxes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer-bg {
+  background-image: url("/images/hcc-bg-amazon2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.header-bg {
+  background-image: url("/images/header-knobs-hcc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
