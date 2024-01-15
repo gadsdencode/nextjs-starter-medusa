@@ -16,8 +16,10 @@ type LabelProps = Omit<React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root
     htmlFor?: string;
 };
 
-const Label = React.forwardRef<HTMLLabelElement, LabelProps>((props, ref) => (
-    <LabelPrimitive.Root {...props} ref={ref} />
+const Label = React.forwardRef<HTMLLabelElement, LabelProps>(({ children, className, htmlFor, ...props }, ref) => (
+    <LabelPrimitive.Root ref={ref} className={className} htmlFor={htmlFor} {...props}>
+        {children}
+    </LabelPrimitive.Root>
 ));
 Label.displayName = 'Label';
 
