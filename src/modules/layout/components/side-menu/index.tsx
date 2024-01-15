@@ -36,7 +36,7 @@ const SideMenu = ({
           {({ open, close }) => (
             <>
               <div className="relative flex h-full">
-                <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
+                <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none text-slate-100 hover:text-slate-500">
                   Menu
                 </Popover.Button>
               </div>
@@ -94,7 +94,7 @@ const SideMenu = ({
                         />
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Heaters & Controls. All rights
+                        © {new Date().getFullYear()} Heaters & Controls Hydraulics. All rights
                         reserved.
                       </Text>
                     </div>

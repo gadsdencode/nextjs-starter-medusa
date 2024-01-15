@@ -57,6 +57,19 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <script dangerouslySetInnerHTML={{
+    __html: `
+    window.difyChatbotConfig = {
+      token: 'db4qUU4YuNIh3uDv'
+    };
+  `
+}}
+/>
+<script
+ src="https://udify.app/embed.min.js"
+ id="db4qUU4YuNIh3uDv"
+ defer>
+</script>
       <div className="py-12 bg-slate-900">
         <ul className="flex flex-col gap-x-6 bg-slate-900">
           <FeaturedProducts collections={collections} />

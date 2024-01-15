@@ -34,7 +34,7 @@ export default async function Nav() {
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <Link
-                  className="hover:text-ui-fg-base"
+                  className="text-slate-100 hover:text-slate-500"
                   href="/search"
                   scroll={false}
                 >

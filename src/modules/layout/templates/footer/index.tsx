@@ -23,8 +23,8 @@ export default async function Footer() {
     (categories) => categories
   )
   return (
-    <footer className="border-t border-ui-border-base w-full bg-slate-900">
-      <div className="content-container flex flex-col w-full footer-bg rounded-lg">
+    <footer className="border-t border-ui-border-base w-full footer-bg">
+      <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>
             <Link
@@ -104,7 +104,7 @@ export default async function Footer() {
                   {productCollections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <Link
-                        className="hover:text-slate-500"
+                        className="text-slate-400 hover:text-slate-500"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
@@ -119,12 +119,12 @@ export default async function Footer() {
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
-                    href="https://github.com/medusajs"
+                    href="https://overture-systems.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-slate-500"
+                    className="text-slate-400 hover:text-slate-500"
                   >
-                    GitHub
+                    OSS
                   </a>
                 </li>
                 <li>
@@ -132,7 +132,7 @@ export default async function Footer() {
                     href="https://docs.medusajs.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-slate-500"
+                    className="text-slate-400 hover:text-slate-500"
                   >
                     Documentation
                   </a>
@@ -142,7 +142,7 @@ export default async function Footer() {
                     href="https://github.com/medusajs/nextjs-starter-medusa"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-slate-500"
+                    className="text-slate-400 hover:text-slate-500"
                   >
                     Source code
                   </a>
