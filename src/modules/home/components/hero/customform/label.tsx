@@ -10,7 +10,7 @@ const labelVariants = cva(
 "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 )
 
-type LabelProps = Omit<React.ComponentProps<typeof LabelPrimitive.Root>, 'ref'> & {
+type LabelProps = React.ComponentProps<typeof LabelPrimitive.Root> & {
     children: React.ReactNode;
     className?: string;
     htmlFor?: string;
@@ -19,8 +19,8 @@ type LabelProps = Omit<React.ComponentProps<typeof LabelPrimitive.Root>, 'ref'> 
 const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
     ({ children, className, htmlFor, ...props }, ref) => (
     <LabelPrimitive.Root 
-        ref={ref} 
-        className={cn`${labelVariants} ${className}`}
+        ref={ref}
+        className={`${labelVariants} ${className || ''}`} // Correctly applying class names
         htmlFor={htmlFor} 
         {...props}
     >
