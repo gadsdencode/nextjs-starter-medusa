@@ -23,9 +23,14 @@ interface SelectTriggerProps extends React.ComponentPropsWithoutRef<typeof Selec
   id?: string;
 }
 
+interface SelectValueProps extends SelectPrimitive.SelectValueProps, React.RefAttributes<HTMLSpanElement> {}
+
 const SelectGroup = SelectPrimitive.Group
 
-const SelectValue = SelectPrimitive.Value
+const SelectValue = React.forwardRef<HTMLSpanElement, SelectValueProps>(({ ...props }, ref) => (
+  <SelectPrimitive.Value ref={ref} {...props} />
+));
+SelectValue.displayName = 'SelectValue';
 
 const SelectTrigger = React.forwardRef<React.ElementRef<typeof SelectPrimitive.Trigger>, SelectTriggerProps>(
   ({ className, id, children, ...props }, ref) => (
