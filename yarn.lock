@@ -584,6 +584,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.5":
+  version: 7.23.8
+  resolution: "@babel/runtime@npm:7.23.8"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 0bd5543c26811153822a9f382fd39886f66825ff2a397a19008011376533747cd05c33a91f6248c0b8b0edf0448d7c167ebfba34786088f1b7eb11c65be7dfc3
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15, @babel/template@npm:^7.22.5":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -4700,6 +4709,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "clsx@npm:2.1.0"
+  checksum: 43fefc29b6b49c9476fbce4f8b1cc75c27b67747738e598e6651dd40d63692135dc60b18fa1c5b78a2a9ba8ae6fd2055a068924b94e20b42039bd53b78b98e1d
+  languageName: node
+  linkType: hard
+
 "cluster-key-slot@npm:^1.1.0":
   version: 1.1.2
   resolution: "cluster-key-slot@npm:1.1.2"
@@ -8354,6 +8370,7 @@ __metadata:
     autoprefixer: ^10.4.2
     babel-loader: ^8.2.3
     class-variance-authority: ^0.7.0
+    clsx: ^2.1.0
     cypress: ^9.5.2
     eslint: 8.10.0
     eslint-config-next: ^13.4.5
@@ -8368,7 +8385,9 @@ __metadata:
     react-dom: ^18.2.0
     react-instantsearch-hooks-web: ^6.29.0
     react-intersection-observer: ^9.3.4
+    tailwind-merge: ^2.2.0
     tailwindcss: ^3.0.23
+    tailwindcss-animate: ^1.0.7
     tailwindcss-radix: ^2.8.0
     typescript: ^5.3.2
     webpack: ^5
@@ -11143,7 +11162,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss-animate@npm:^1.0.6":
+"tailwind-merge@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "tailwind-merge@npm:2.2.0"
+  dependencies:
+    "@babel/runtime": ^7.23.5
+  checksum: f80d31ec990792fb204e3ad5a184a4b18a8f8929c651c7067693d8ffa74c6ec9666f15f4e50c1d831a47e7dcc75e688887e34fdb734096363ad1868d9ad5778a
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animate@npm:^1.0.6, tailwindcss-animate@npm:^1.0.7":
   version: 1.0.7
   resolution: "tailwindcss-animate@npm:1.0.7"
   peerDependencies:
