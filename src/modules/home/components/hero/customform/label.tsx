@@ -12,7 +12,8 @@ const labelVariants = cva(
 
 type LabelProps = React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & 
 VariantProps<typeof labelVariants> & {
-    children: React.ReactNode; // Adding children prop
+    children: React.ReactNode;
+    className?: string;
 };
 
 const Label = React.forwardRef<
