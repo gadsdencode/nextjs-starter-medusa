@@ -23,6 +23,7 @@
     "@ark-ui/react": "^1.2.1",
     "@headlessui/react": "^1.6.1",
     "@hookform/error-message": "^2.0.0",
+    "@material-tailwind/react": "^2.1.8",
     "@medusajs/link-modules": "^0.2.3",
     "@medusajs/medusa-js": "^6.1.4",
     "@medusajs/modules-sdk": "^1.12.3",

@@ -5,7 +5,6 @@ import { Suspense } from "react"
 import { listRegions } from "@lib/data"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
-import CustomOrderForm from "../../../home/components//hero/customform/customorder"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
