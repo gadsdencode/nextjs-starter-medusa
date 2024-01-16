@@ -8,10 +8,12 @@ const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
 const PopoverAnchor = PopoverPrimitive.Anchor;
 
-type PopoverContentProps = Omit<React.ComponentProps<typeof PopoverPrimitive.Content>, 'as' | 'forceMount'>;
+type PopoverContentProps = Omit<React.ComponentProps<typeof PopoverPrimitive.Content>, 'as' | 'forceMount'> & {
+  children?: React.ReactNode;
+};
 
 const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
-  ({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+  ({ children, className, align = "center", sideOffset = 4, ...props }, ref) => (
     <PopoverPrimitive.Portal>
       <PopoverPrimitive.Content
         ref={ref}
@@ -22,7 +24,9 @@ const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
           className
         )}
         {...props}
-      />
+      >
+        {children}
+      </PopoverPrimitive.Content>
     </PopoverPrimitive.Portal>
 ));
 
