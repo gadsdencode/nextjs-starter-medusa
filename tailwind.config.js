@@ -1,7 +1,5 @@
 const path = require("path")
-const { blackA, mauve, violet } = require('@radix-ui/colors');
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [require("@medusajs/ui-preset")],
   content: [
@@ -10,7 +8,6 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
-    './App.jsx',
   ],
   theme: {
     extend: {
@@ -23,9 +20,6 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
-        ...blackA,
-        ...mauve,
-        ...violet,
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",
@@ -132,22 +126,6 @@ module.exports = {
             "max-height": "none",
             opacity: "1",
           },
-          slideUpAndFade: {
-            from: { opacity: 0, transform: 'translateY(2px)' },
-            to: { opacity: 1, transform: 'translateY(0)' },
-          },
-          slideRightAndFade: {
-            from: { opacity: 0, transform: 'translateX(-2px)' },
-            to: { opacity: 1, transform: 'translateX(0)' },
-          },
-          slideDownAndFade: {
-            from: { opacity: 0, transform: 'translateY(-2px)' },
-            to: { opacity: 1, transform: 'translateY(0)' },
-          },
-          slideLeftAndFade: {
-            from: { opacity: 0, transform: 'translateX(2px)' },
-            to: { opacity: 1, transform: 'translateX(0)' },
-          },
         },
         enter: {
           "0%": { transform: "scale(0.9)", opacity: 0 },
@@ -176,10 +154,6 @@ module.exports = {
         enter: "enter 200ms ease-out",
         "slide-in": "slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)",
         leave: "leave 150ms ease-in forwards",
-        slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
-        slideRightAndFade: 'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
-        slideDownAndFade: 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
-        slideLeftAndFade: 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

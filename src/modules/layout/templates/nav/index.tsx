@@ -5,11 +5,6 @@ import { Suspense } from "react"
 import { listRegions } from "@lib/data"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../../../home/components//hero/customform/popover"
 import CustomOrderForm from "../../../home/components//hero/customform/customorder"
 
 export default async function Nav() {
@@ -39,10 +34,7 @@ export default async function Nav() {
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
             <div>
-          <Popover>
-            <PopoverTrigger className="m-5 border rounded-lg p-2 text-slate-100 hover:text-slate-500">Custom Order</PopoverTrigger>
-            <PopoverContent><CustomOrderForm /></PopoverContent>
-          </Popover>
+          {/* Popover /> */}
           </div>
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <Link

@@ -1,15 +1,9 @@
 'use client'
 
 import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+import { Heading } from "@medusajs/ui"
 import UnderlineLink from "@modules/common/components/interactive-link"
 import Image from "next/image"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../hero/customform/popover"
-import CustomOrderForm from "../hero/customform/customorder"
 
 
 const Hero = () => {
