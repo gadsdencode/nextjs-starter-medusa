@@ -8,6 +8,7 @@ const PopoverAnchor = PopoverPrimitive.Anchor;
 
 type PopoverContentProps = Omit<PopoverPrimitive.PopoverContentProps, 'as' | 'forceMount'> & {
   children?: React.ReactNode;
+  container?: HTMLElement | null;
 };
 
 const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
