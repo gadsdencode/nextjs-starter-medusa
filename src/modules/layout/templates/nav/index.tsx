@@ -5,6 +5,7 @@ import { Suspense } from "react"
 import { listRegions } from "@lib/data"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import CustomOrderModal from "@modules/home/components/hero/custom-order-modal/index"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -33,7 +34,7 @@ export default async function Nav() {
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
             <div>
-          {/* Popover /> */}
+          <CustomOrderModal />
           </div>
               {process.env.FEATURE_SEARCH_ENABLED && (
                 <Link

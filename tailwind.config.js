@@ -8,6 +8,8 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js",
+    "./public/**/*.html",
   ],
   theme: {
     extend: {
@@ -157,5 +159,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-radix")()],
-}
+  plugins: [require("tailwindcss-radix")(),
+  require('flowbite/plugin')
+],
+};
