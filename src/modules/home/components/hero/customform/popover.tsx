@@ -2,17 +2,13 @@
 
 import * as React from "react";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
-
 import { cn } from "./utils";
 
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
 const PopoverAnchor = PopoverPrimitive.Anchor;
 
-// Adjust the PopoverContentProps type to match Radix UI's expectations
-type PopoverContentProps = React.ComponentProps<typeof PopoverPrimitive.Content> & {
-  // Additional props (if any) can be added here
-};
+type PopoverContentProps = Omit<React.ComponentProps<typeof PopoverPrimitive.Content>, 'as' | 'forceMount'>;
 
 const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
   ({ className, align = "center", sideOffset = 4, ...props }, ref) => (
