@@ -1,7 +1,6 @@
 'use client'
 
 import { CardTitle, CardDescription, CardHeader, CardContent, CardFooter, Card } from "./card"
-import { Label } from "./label"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "./select"
 import { Input } from "./input"
 import { Textarea } from "./textarea"
@@ -18,7 +17,7 @@ export default function CustomOrderForm() {
         <CardContent className="w-full bg-slate-900">
           <form className="space-y-4">
             <div className="space-y-2">
-              <Label className="text-white" htmlFor="heater-type">Heater Type</Label>
+              <label className="text-white" htmlFor="heater-type">Heater Type</label>
               <Select>
                 <SelectTrigger className="text-white" id="heater-type">
                   <SelectValue className="text-white" placeholder="Select Heater Type" />
@@ -32,38 +31,38 @@ export default function CustomOrderForm() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label className="text-white" htmlFor="power-output">Power Output</Label>
+                <label className="text-white" htmlFor="power-output">Power Output</label>
                 <Input className="text-white" id="power-output" placeholder="Enter Power Output" />
               </div>
               <div className="space-y-2">
-                <Label className="text-white" htmlFor="voltage">Voltage</Label>
+                <label className="text-white" htmlFor="voltage">Voltage</label>
                 <Input className="text-white" id="voltage" placeholder="Enter Voltage" />
               </div>
             </div>
             <div className="space-y-2">
-              <Label className="text-white" htmlFor="control-features">Control Features</Label>
+              <label className="text-white" htmlFor="control-features">Control Features</label>
               <Textarea className="text-white" id="control-features" placeholder="Enter Control Features" />
             </div>
             <div className="space-y-2">
-              <Label className="text-white" htmlFor="additional-accessories">Additional Accessories</Label>
+              <label className="text-white" htmlFor="additional-accessories">Additional Accessories</label>
               <Textarea className="text-white" id="additional-accessories" placeholder="Enter Additional Accessories" />
             </div>
             <div className="space-y-2">
-              <Label className="text-white" htmlFor="special-requirements">Special Requirements</Label>
+              <label className="text-white" htmlFor="special-requirements">Special Requirements</label>
               <Textarea className="text-white" id="special-requirements" placeholder="Enter Special Requirements" />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label className="text-white" htmlFor="customer-name">Customer Name</Label>
+                <label className="text-white" htmlFor="customer-name">Customer Name</label>
                 <Input className="text-white" id="customer-name" placeholder="Enter Customer Name" />
               </div>
               <div className="space-y-2">
-                <Label className="text-white" htmlFor="customer-email">Customer Email</Label>
+                <label className="text-white" htmlFor="customer-email">Customer Email</label>
                 <Input className="text-white" id="customer-email" placeholder="Enter Customer Email" />
               </div>
             </div>
             <div className="space-y-2">
-              <Label className="text-white" htmlFor="shipping-details">Shipping Details</Label>
+              <label className="text-white" htmlFor="shipping-details">Shipping Details</label>
               <Textarea className="text-white" id="shipping-details" placeholder="Enter Shipping Details" />
             </div>
           </form>
