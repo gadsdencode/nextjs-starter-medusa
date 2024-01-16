@@ -12,7 +12,7 @@ type PopoverContentProps = Omit<PopoverPrimitive.PopoverContentProps, 'as' | 'fo
   children?: React.ReactNode;
 };
 
-const PopoverContent: React.ForwardRefRenderFunction<HTMLDivElement, PopoverContentProps> =
+const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
   ({ children, className, align = "center", sideOffset = 4, ...props }, ref) => (
     <PopoverPrimitive.Portal>
       <PopoverPrimitive.Content
@@ -28,7 +28,7 @@ const PopoverContent: React.ForwardRefRenderFunction<HTMLDivElement, PopoverCont
         {children}
       </PopoverPrimitive.Content>
     </PopoverPrimitive.Portal>
-);
+));
 
 PopoverContent.displayName = 'PopoverContent';
 
