@@ -7,7 +7,7 @@ const PopoverTrigger = PopoverPrimitive.Trigger;
 const PopoverAnchor = PopoverPrimitive.Anchor;
 
 type PopoverContentProps = Omit<PopoverPrimitive.PopoverContentProps, 'as' | 'forceMount'> & {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   container?: HTMLElement | null;
 };
 
