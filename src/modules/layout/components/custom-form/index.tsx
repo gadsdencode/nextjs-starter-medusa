@@ -21,7 +21,7 @@ interface SelectDefaultProps {
           className="rounded-lg text-black"
           id="heaterType"
           label="Select Version"
-          nonce={undefined} onResize={undefined} onResizeCapture={undefined}
+          nonce={undefined} onResize={undefined} onResizeCapture={undefined} placeholder={'Choose your desired type'}
       >
           <Option className="text-black bg-white p-1 m-2" value="Electric">Electric</Option>
           <Option className="text-black bg-white p-1 m-2" value="Gas">Gas</Option>
@@ -85,7 +85,7 @@ interface SelectDefaultProps {
           <form onSubmit={handleSubmit} className="space-y-4 rounded-lg p-5 text-white">
             <div className="space-y-2 text-black">
               <label className="text-white rounded-lg" htmlFor="heaterType">Heater Type</label>
-              <SelectDefault value={formData.heaterType} placeholder='' className="text-white" onSelectChange={(value) => handleSelectChange('heaterType', value)} />
+              <SelectDefault value={formData.heaterType} placeholder='Choose your desired type' className="text-white" onSelectChange={(value) => handleSelectChange('heaterType', value)} />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
