@@ -4,12 +4,14 @@ import Link from "next/link"
 import RefinementList from "@modules/store/components/refinement-list"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 type SearchResultsTemplateProps = {
   query: string
   ids: string[]
   sortBy?: SortOptions
   page?: string
+  countryCode: string
 }
 
 const SearchResultsTemplate = ({
@@ -17,6 +19,7 @@ const SearchResultsTemplate = ({
   ids,
   sortBy,
   page,
+  countryCode,
 }: SearchResultsTemplateProps) => {
   const pageNumber = page ? parseInt(page) : 1
 
@@ -26,15 +29,15 @@ const SearchResultsTemplate = ({
         <div className="flex flex-col items-start">
           <Text className="text-ui-fg-muted">Search Results for:</Text>
           <Heading>
-            {query} ({ids.length})
+            {decodeURI(query)} ({ids.length})
           </Heading>
         </div>
-        <Link
+        <LocalizedClientLink
           href="/store"
           className="txt-medium text-ui-fg-subtle hover:text-ui-fg-base"
         >
           Clear
-        </Link>
+        </LocalizedClientLink>
       </div>
       <div className="flex flex-col small:flex-row small:items-start p-6">
         {ids.length > 0 ? (
@@ -45,6 +48,7 @@ const SearchResultsTemplate = ({
                 productsIds={ids}
                 sortBy={sortBy}
                 page={pageNumber}
+                countryCode={countryCode}
               />
             </div>
           </>

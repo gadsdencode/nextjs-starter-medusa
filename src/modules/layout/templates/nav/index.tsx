@@ -1,16 +1,14 @@
-import { cookies } from "next/headers"
-import Link from "next/link"
+import { headers } from "next/headers"
 import { Suspense } from "react"
 
 import { listRegions } from "@lib/data"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import CustomOrderModal from "@modules/home/components/hero/custom-order-modal/index"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
-  const regionCookie = cookies().get("_medusa_region")?.value
-  const currentRegion = regionCookie && JSON.parse(regionCookie)
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
@@ -18,17 +16,17 @@ export default async function Nav() {
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
-              <SideMenu regions={regions} currentRegion={currentRegion} />
+              <SideMenu regions={regions} />
             </div>
           </div>
 
           <div className="flex items-center h-full">
-            <Link
+            <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus text-slate-100 hover:text-slate-500 uppercase"
             >
               Heaters & Controls Hydraulics
-            </Link>
+            </LocalizedClientLink>
           </div>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
@@ -37,23 +35,23 @@ export default async function Nav() {
           <CustomOrderModal />
           </div>
               {process.env.FEATURE_SEARCH_ENABLED && (
-                <Link
+                <LocalizedClientLink
                   className="text-slate-100 hover:text-slate-500"
                   href="/search"
                   scroll={false}
                 >
                   Search
-                </Link>
+                </LocalizedClientLink>
               )}
-              <Link className="text-slate-100 hover:text-slate-500" href="/account">
+              <LocalizedClientLink className="text-slate-100 hover:text-slate-500" href="/account">
                 Account
-              </Link>
+              </LocalizedClientLink>
             </div>
             <Suspense
               fallback={
-                <Link className="text-slate-100 hover:text-slate-500 flex gap-2" href="/cart">
+                <LocalizedClientLink className="text-slate-100 hover:text-slate-500 flex gap-2" href="/cart">
                   Cart (0)
-                </Link>
+                </LocalizedClientLink>
               }
             >
               <CartButton />
