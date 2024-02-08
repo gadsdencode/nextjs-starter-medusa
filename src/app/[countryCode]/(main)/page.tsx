@@ -84,7 +84,7 @@ export default async function Home({
 </script>
       <div className="py-12 bg-slate-900">
         <ul className="flex flex-col gap-x-6 bg-slate-900">
-          <FeaturedProducts collections={collections} />
+          <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
     </>
